@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Formulario</title>
 </head>
 <body>
     <h1 id="title">Formulario de aplicación</h1>
     <p id="description">Información personal</p>
-    <form id="survey-form">
+    <form id="survey-form" onsubmit="handleSubmit(event)">
 
         <fieldset>
             <label for="name" id="name-label">Nombre:</label>
@@ -54,38 +55,37 @@
         </fieldset>
 
         <fieldset>
-    <legend>¿Cuáles de estos equipos tiene en casa?</legend>
-    <label for="mobile">
-        <input type="checkbox" id="mobile" name="devices" value="mobile"> Móvil
-    </label>
-    <label for="tablet">
-        <input type="checkbox" id="tablet" name="devices" value="tablet"> Tablet
-    </label>
-    <label for="laptop">
-        <input type="checkbox" id="laptop" name="devices" value="laptop"> Laptop
-    </label>
-    <label for="desktop">
-        <input type="checkbox" id="desktop" name="devices" value="desktop"> PC de escritorio
-    </label>
-    <label for="none">
-        <input type="checkbox" id="none" name="devices" value="none"> Ninguno
-    </label>
-</fieldset>
+            <legend>¿Cuáles de estos equipos tiene en casa?</legend>
+            <label for="mobile">
+                <input type="checkbox" id="mobile" name="devices" value="mobile"> Móvil
+            </label>
+            <label for="tablet">
+                <input type="checkbox" id="tablet" name="devices" value="tablet"> Tablet
+            </label>
+            <label for="laptop">
+                <input type="checkbox" id="laptop" name="devices" value="laptop"> Laptop
+            </label>
+            <label for="desktop">
+                <input type="checkbox" id="desktop" name="devices" value="desktop"> PC de escritorio
+            </label>
+            <label for="none">
+                <input type="checkbox" id="none" name="devices" value="none"> Ninguno
+            </label>
+        </fieldset>
 
-<fieldset>
-    <label for="profile">Perfil profesional:</label>
-    <textarea 
-        id="profile" 
-        name="profile" 
-        rows="6" 
-        cols="50" 
-        placeholder="Describe brevemente tu perfil profesional (máximo 500 caracteres)" 
-        maxlength="500"
-        required></textarea>
-</fieldset>
+        <fieldset>
+            <label for="profile">Perfil profesional:</label>
+            <textarea 
+                id="profile" 
+                name="profile" 
+                rows="6" 
+                cols="50" 
+                placeholder="Describe brevemente tu perfil profesional (máximo 500 caracteres)" 
+                maxlength="500"
+                required></textarea>
+        </fieldset>
 
-<button id="submit" type="submit">Enviar</button>
-
+        <button id="submit" type="submit">Enviar</button>
 
     </form>
 </body>
