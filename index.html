@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario</title>
+</head>
+<body>
+    <h1 id="title">Formulario de aplicación</h1>
+    <p id="description">Información personal</p>
+    <form id="survey-form">
+
+        <fieldset>
+            <label for="name" id="name-label">Nombre:</label>
+            <input required type="text" id="name" name="name" placeholder="Pepito Pérez" />
+        </fieldset>
+
+        <fieldset>
+            <label for="email" id="email-label">Email:</label>
+            <input required id="email" name="email" type="email" placeholder="dominio@mail.com" />
+        </fieldset>
+
+        <fieldset>
+            <label for="number" id="number-label">Edad:</label>
+            <input required id="number" name="age" type="number" min="18" max="100" placeholder="Edad (18-100)" />
+        </fieldset>
+
+        <fieldset>
+            <label for="dropdown">Género:</label>
+            <select id="dropdown" name="gender">
+                <option value="">(Seleccione una opción)</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+                <option value="other">Otro</option>
+                <option value="prefer-not-to-say">Prefiero no decirlo</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label>¿Cuánta experiencia laboral tiene?</label>
+            <label>
+                <input type="radio" name="experience" value="none"> Ninguna
+            </label>
+            <label>
+                <input type="radio" name="experience" value="less-than-1"> Menos de 1 año
+            </label>
+            <label>
+                <input type="radio" name="experience" value="1-3"> Entre 1 y 3 años
+            </label>
+            <label>
+                <input type="radio" name="experience" value="more-than-3"> Más de 3 años
+            </label>
+        </fieldset>
+
+        <fieldset>
+    <legend>¿Cuáles de estos equipos tiene en casa?</legend>
+    <label for="mobile">
+        <input type="checkbox" id="mobile" name="devices" value="mobile"> Móvil
+    </label>
+    <label for="tablet">
+        <input type="checkbox" id="tablet" name="devices" value="tablet"> Tablet
+    </label>
+    <label for="laptop">
+        <input type="checkbox" id="laptop" name="devices" value="laptop"> Laptop
+    </label>
+    <label for="desktop">
+        <input type="checkbox" id="desktop" name="devices" value="desktop"> PC de escritorio
+    </label>
+    <label for="none">
+        <input type="checkbox" id="none" name="devices" value="none"> Ninguno
+    </label>
+</fieldset>
+
+<fieldset>
+    <label for="profile">Perfil profesional:</label>
+    <textarea 
+        id="profile" 
+        name="profile" 
+        rows="6" 
+        cols="50" 
+        placeholder="Describe brevemente tu perfil profesional (máximo 500 caracteres)" 
+        maxlength="500"
+        required></textarea>
+</fieldset>
+
+<button id="submit" type="submit">Enviar</button>
+
+
+    </form>
+</body>
+</html>
